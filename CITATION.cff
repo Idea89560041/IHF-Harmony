@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the IHF-Harmony manuscript."
+title: "IHF-Harmony: Multi-Modality Magnetic Resonance Images Harmonization using Invertible Hierarchy Flow Model"
+authors:
+  - family-names: Zhu
+    given-names: Pengli
+  - family-names: Zhu
+    given-names: Yitao
+  - family-names: Pang
+    given-names: Haowen
+  - family-names: Qiu
+    given-names: Anqi
+date-released: "2026-02-25"
+url: "https://arxiv.org/abs/2602.21536"

@@ -1,0 +1,6 @@
+./datasets/image/siteCOI_slice/sub-01_ses-siteCOI_mni_slice_089.png
+./datasets/image/siteCOI_slice/sub-01_ses-siteCOI_mni_slice_090.png
+./datasets/image/siteCOI_slice/sub-01_ses-siteCOI_mni_slice_091.png
+./datasets/image/siteCOI_slice/sub-01_ses-siteCOI_mni_slice_092.png
+./datasets/image/siteCOI_slice/sub-01_ses-siteCOI_mni_slice_093.png
+./datasets/image/siteCOI_slice/sub-01_ses-siteCOI_mni_slice_094.png

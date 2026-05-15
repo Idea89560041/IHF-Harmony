@@ -1,0 +1,68 @@
+output: ./output_dir
+task_name: debug_cpu
+
+dataset:
+  intensity_range: zero_one
+  train:
+    source_list: ./datasets/HUH/train.txt
+    target_list: ./datasets/COI/train.txt
+    source_root: ""
+    target_root: ""
+    width: 64
+    height: 64
+    scale_l: 1.0
+    scale_h: 1.0
+    transform: []
+    random_pair: false
+    return_name: true
+    batch_size: 1
+  test:
+    source_list: ./datasets/HUH/test.txt
+    target_list: ./datasets/COI/test.txt
+    source_root: ""
+    target_root: ""
+    width: 64
+    height: 64
+    scale_l: 1.0
+    scale_h: 1.0
+    transform: []
+    random_pair: false
+    return_name: true
+    batch_size: 1
+
+train:
+  max_steps: 1
+  print_freq: 1
+  image_freq: 1
+  save_freq: 1
+  eval_after_train: false
+  resume: false
+  load_path: ""
+  num_workers: 0
+  amp: false
+  cudnn_benchmark: false
+
+optimizer:
+  type: adam
+  lr: 0.0001
+  betas: [0.9, 0.999]
+  weight_decay: 0.0
+
+network:
+  pad_size: 4
+  in_channel: 3
+  out_channels: [12, 48]
+  weight_type: learned
+  style_dim: 16
+  style_base_channels: 8
+  use_squeeze: false
+
+loss:
+  vgg_encoder: model/losses/vgg_model/vgg_normalised.pth
+  keep_ratio: 0.9
+  anatomy_weight: 1.0
+  artifact_weight: 2.0
+
+lr_scheduler:
+  type: cosine
+  eta_min: 0.0
