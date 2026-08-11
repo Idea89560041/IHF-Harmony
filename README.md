@@ -1,24 +1,10 @@
-# IHF-Harmony
+# CRAFT
 
-PyTorch implementation of **IHF-Harmony: Multi-Modality Magnetic Resonance
-Images Harmonization using Invertible Hierarchy Flow Model**.
+PyTorch implementation of **CRAFT: Coupled Reversible Affine Flow Translation for Unpaired Multimodal MRI Harmonization**.
 
-This project is built on and adapted from
-[HierarchyFlow](https://github.com/WeichenFan/HierarchyFlow), with the original
-CV image-to-image translation framework modified for unpaired medical MRI
-harmonization.
+
 
 ![IHF-Harmony overview](docs/figures/ihf_harmony_overview.png)
-
-## Main Changes
-
-- Reorganized the code into a cleaner MRI harmonization pipeline.
-- Added CPU smoke-test support and GPU/DDP training support in one entry point.
-- Reworked data loading for unpaired source/target MRI slice lists.
-- Implemented manuscript-aligned IHF blocks, artifact-aware normalization, and
-  VGG-based anatomy/artifact consistency losses.
-- Added lightweight demo data lists while keeping raw image folders,
-  checkpoints, outputs, and VGG weights out of git.
 
 ## Code Structure
 
@@ -101,6 +87,11 @@ Evaluation:
 ```bash
 python main.py --config configs/config.yaml --eval-only --load-path output_dir/harmonization/model_save/final.ckpt.pth.tar
 ```
+
+This project is built on and adapted from
+[HierarchyFlow](https://github.com/WeichenFan/HierarchyFlow), with the original
+CV image-to-image translation framework modified for unpaired medical MRI
+harmonization.
 
 ## Citation
 
